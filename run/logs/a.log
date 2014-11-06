@@ -1,0 +1,7 @@
+2014-11-06 16:25:09,516 DEBUG neev.slf4j.Ap.App [main] hi
+2014-11-06 16:25:09,521 WARN neev.slf4j.Ap.App [main] main null java.lang.NumberFormatException: For input string: "v"
+java.lang.NumberFormatException: For input string: "v"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[?:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[?:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_20]
+	at neev.slf4j.Ap.App.main(App.java:18) [Ap-1.jar:?]
