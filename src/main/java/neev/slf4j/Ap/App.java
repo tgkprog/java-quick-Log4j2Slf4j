@@ -12,7 +12,7 @@ public class App
 
     public static void main( String[] args )
     {
-    	logger.debug("hi");
+    	logger.debug("start");
     	String a = null;
     	try {
     		int i = Integer.parseInt("v");//throws
@@ -20,6 +20,21 @@ public class App
     	}catch(Throwable e) {
     		logger.warn("main " + a + " " + e, e);
     	}
-        System.out.println( "Hello World!" );
+    	int i = 0;
+        for(;;) {
+        	i++;
+        	logger.debug("Ping " + i + ", " + ((i) % 104) + ", " + (((i) % 104) == 0));
+        	
+        	if((i % 104) == 0) {
+        		i = 0;
+        		logger.warn("ping pong");
+        	}
+        	try {
+				Thread.sleep(3500);
+			} catch (Exception e) {
+				//ignore
+				logger.warn("slp " + e);
+			}
+        }
     }
 }
