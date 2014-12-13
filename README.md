@@ -5,7 +5,7 @@ Sample config and code to make a slf4j with log4j2 includes runtime jars
 
 Dependancies with log4j 
 
-<dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -26,6 +26,7 @@ Dependancies with log4j
 			<artifactId>log4j-core</artifactId>
 			<version>2.1</version>
 		</dependency>
+	</dependencies>
 		
 Code declare sample:
 
@@ -34,8 +35,8 @@ Code declare sample:
 
 log4j2.xml in classpath
 
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration status="WARN">
+	<?xml version="1.0" encoding="UTF-8"?>
+	<configuration status="WARN">
 	<appenders>
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
